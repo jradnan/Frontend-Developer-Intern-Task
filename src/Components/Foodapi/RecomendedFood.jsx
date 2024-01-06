@@ -2,10 +2,8 @@ import { useEffect, useState } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import AllFood from "./AllFood";
 
-
-const FoodApi = () => {
+const RecomendedFood = () => {
   const [foodData, setFoodData] = useState([]);
 
   useEffect(() => {
@@ -16,7 +14,6 @@ const FoodApi = () => {
       .then((data) => setFoodData(data.Items));
   }, []);
   const settings = {
-    
     infinite: false,
     speed: 500,
     slidesToShow: 5,
@@ -30,7 +27,6 @@ const FoodApi = () => {
           slidesToShow: 3,
           slidesToScroll: 3,
           infinite: true,
-          
         },
       },
       {
@@ -50,22 +46,28 @@ const FoodApi = () => {
       },
     ],
   };
-
   return (
-    <div>
-        <h1 className="text-2xl ml-2 mb-2">Popular</h1>
-      <Slider {...settings} >
-        {foodData.map((foods) => (
-          <AllFood key={foods.Id} foods={foods}></AllFood>
-          
+    <div className="py-20">
+      <h1 className="text-2xl ml-2 mb-2">Recommended</h1>
+      <Slider {...settings}>
+        {foodData.map((item) => (
+          <div key={item.Id}>
+            <figure>
+              <img
+                className="object-cover object-center w-full h-72 rounded-md"
+                src={item.ImageUrl}
+                alt={item.Name}
+                // Set a specific width for the image
+              />
+            </figure>
+            <div>
+              <h2 className="text-center">{item.Name}</h2>
+            </div>
+          </div>
         ))}
       </Slider>
     </div>
   );
 };
 
-{
-  /*  */
-}
-
-export default FoodApi;
+export default RecomendedFood;

@@ -1,5 +1,5 @@
 const FoodCard = ({ foods }) => {
-  console.log(foods);
+
 
   const { ImageUrl, Name } = foods;
 
@@ -8,7 +8,7 @@ const FoodCard = ({ foods }) => {
       <div>
         <figure>
           <img
-            className="object-cover object-center w-full h-60 rounded-md"
+            className="object-cover object-center w-full h-72 rounded-md"
             src={ImageUrl}
             alt={Name}
             // Set a specific width for the image

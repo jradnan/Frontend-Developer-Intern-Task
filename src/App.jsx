@@ -1,5 +1,6 @@
 import "./App.css";
 import Banner from "./Components/Banner/Banner";
+import RecomendedFood from "./Components/Foodapi/RecomendedFood";
 import Navbar from "./Components/Navbar/Navbar";
 import FoodApi from "./Components/foodapi/FoodApi";
 
@@ -9,6 +10,7 @@ function App() {
       <Navbar></Navbar>
       <Banner></Banner>
       <FoodApi></FoodApi>
+      <RecomendedFood></RecomendedFood>
       
     </div>
   );
