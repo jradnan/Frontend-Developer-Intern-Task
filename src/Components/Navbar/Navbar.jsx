@@ -20,10 +20,22 @@ const Navbar = () => {
               <summary className="font-bold bg-white ml-5 py-[14px] px-[48px]">MENU</summary>
               <ul className="p-2">
                 <li>
-                  <a>Submenu 1</a>
+                  <a>Home</a>
                 </li>
                 <li>
-                  <a>Submenu 2</a>
+                  <a>Details</a>
+                </li>
+                <li>
+                  <a>Category</a>
+                </li>
+                <li>
+                  <a>My Favorites</a>
+                </li>
+                <li>
+                  <a>Profile</a>
+                </li>
+                <li>
+                  <a>Login/Sign Up</a>
                 </li>
               </ul>
             </details>

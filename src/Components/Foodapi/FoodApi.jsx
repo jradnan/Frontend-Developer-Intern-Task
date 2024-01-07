@@ -4,7 +4,6 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import AllFood from "./AllFood";
 
-
 const FoodApi = () => {
   const [foodData, setFoodData] = useState([]);
 
@@ -16,7 +15,6 @@ const FoodApi = () => {
       .then((data) => setFoodData(data.Items));
   }, []);
   const settings = {
-    
     infinite: false,
     speed: 500,
     slidesToShow: 5,
@@ -30,7 +28,6 @@ const FoodApi = () => {
           slidesToShow: 3,
           slidesToScroll: 3,
           infinite: true,
-          
         },
       },
       {
@@ -53,11 +50,14 @@ const FoodApi = () => {
 
   return (
     <div>
+      <div className="flex justify-between mr-2">
+        
         <h1 className="text-2xl ml-2 mb-2">Popular</h1>
-      <Slider {...settings} >
+        <h1 className="text-2xl ml-2 mb-2 text-[#F69B35] flex ">AddMore</h1>
+      </div>
+      <Slider {...settings}>
         {foodData.map((foods) => (
           <AllFood key={foods.Id} foods={foods}></AllFood>
-          
         ))}
       </Slider>
     </div>

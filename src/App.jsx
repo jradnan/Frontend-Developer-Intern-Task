@@ -13,6 +13,7 @@ function App() {
         <Banner></Banner>
         <FoodApi></FoodApi>
         <RecomendedFood></RecomendedFood>
+       
       </div>
       <Footer></Footer>
     </>

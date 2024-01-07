@@ -48,7 +48,10 @@ const RecomendedFood = () => {
   };
   return (
     <div className="py-20">
-      <h1 className="text-2xl ml-2 mb-2">Recommended</h1>
+      <div className="flex justify-between mr-2">
+        <h1 className="text-2xl ml-2 mb-2">Recommended</h1>
+        <h1 className="text-2xl ml-2 mb-2 text-[#F69B35] flex ">AddMore</h1>
+      </div>
       <Slider {...settings}>
         {foodData.map((item) => (
           <div key={item.Id}>
